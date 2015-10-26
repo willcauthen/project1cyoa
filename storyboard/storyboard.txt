@@ -1,0 +1,164 @@
+Initiation ---> Login
+
+https://git.heroku.com/limitless-bastion-1733.git
+
+/////////////////////
+//  opening page   //
+////////////////////
+
+"Those two, in paradise, were given a choice: happiness without freedom, or freedom without happiness. There was no third alternative."
+
+
+											///////////////////
+											//     login     //
+											//////////////////
+
+index.ejs
+
+***********************
+	intro1
+***********************
+After several weeks of following rumors to seemingly dead ends, you are contacted by an individual claiming to respresent ____, the agency of freedom fighters you have been searching for.
+
+He gives you a time and place to be to begin your formal indoctrination into _____. He wears nondescript cloths and a hood that conceals his face. Once you confirm you understand your instructions, he takes his leave.
+
+			*	*	*
+
+At the rendezvous, you see him waiting with an associate. Upon your arrival, the greet you aloofly, obviously sizing you up. After a brief round of questioning, they announce you are free to coninue your entry process, but in order to do so you must first agree to be drugged and accompany them elsewhere.
+
+You are welcome to refuse, but if you do, _____ will be closed to you forever.
+	What do you do?
+
+
+
+
+				///////////////////					//////////////////////////////////
+				//    Continue   //					// On second thought, nevermind //   ----> redirect to index.ejs
+				///////////////////					//////////////////////////////////
+						  |
+						  |
+						  |
+						  \/
+				redirect to intro2.ejs
+
+
+
+
+	***********************
+	intro2
+	***********************
+
+	You agree, nervously. All manner of worst-case scenarios run through your mind, but you find your resolve.
+
+	They tell you the drug is a pschotomimetic, and will make it almost impossible for you to form or maintain complicated lies, in the event you are a member of the State's Secret Police. They will effectively dose you, load you in a van heading for an undisclosed location and question you further. If they are satisfied with your performance, you will become an initiated member of _____, and then the real work will begin. 
+	Are you prepared?
+
+
+				////////////////////					/////////////////////////////
+				// 	  Continue    //					//   Wait a second, what?  //
+				////////////////////					/////////////////////////////
+						|											  |	
+						|											  |
+						|											  |
+						\/											  \/
+			redirect to intro2.ejs							redirect to intro2.ejs
+
+
+
+
+	************************
+	intro3
+	************************
+
+	Very suddenly, before you can tell what has happened, a spray bottle emerges in an agent's hand and is sprayed directly in your face.
+
+	You curse, but not before you take a panicked breath of the narcotic. Things are already starting to get fuzzy.
+
+	They lead you gently to a van idly around the corner.
+
+	Once all of you board into the back, the driver pulls out. You are already too disoriented to trakc where you are going. In the back of the van, the men ask you to verify your name.
+
+
+										input box
+									////////////////////////
+									//   email goes here  //
+									////////////////////////
+
+									////////////////////////
+									//   submit button    //		
+									////////////////////////
+
+
+
+************************
+	intro4
+************************
+
+	You mumble your full name, which seems to satisfy them. The outside world is blurring past in vivid colors. The drug begins to take hold.
+	In a voice that seems strangely melodic, you are asked to confirm your identity with your State Security Number.
+
+
+									////////////////////////
+									//   password   here  //
+									////////////////////////
+
+									////////////////////////
+									//   submit button    //		
+									////////////////////////
+
+
+************************
+	intro5
+************************
+
+You incoherently slur your personal information. The men in the van didn't seem to be able to understand.
+
+They gently ask you to repeat yourself, explaining that they need this information to verify that you are who you say you are and not, in fact, a member of the state's secret police.
+
+They remind you to enunciate as best you can.
+
+
+									////////////////////////
+									//   retype password  //
+									////////////////////////
+
+									////////////////////////
+									//   submit button    //		
+									////////////////////////
+
+
+				|||||||||||||||
+				|*************| 
+				|||||||||||||||
+						if (password1 !== password2) { The agents watch you intently. }
+
+
+
+
+
+************************
+	intro6
+************************
+
+You begin to lose track of time. As the van drives around, you know not where, you cannot begin to guess how much time has passed. You also seem unable to recount what you and these people have been talking about.
+
+They tell you that none within _____ use, or even know, one anothers' real names. If you are to join, you will similarly have to take a false name. They introduce themselves as Syme & Helmholtz. Syme being the same figure that approached you, and invited you to this cloak-and-dagger outing. Syme is to serve as your mentor as you learn your way around _____, and until you are fully initiated, he will serve as your sole connection to _____. 
+
+									////////////////////////
+									//      username      //
+									////////////////////////
+
+									////////////////////////
+									//   submit button    //		
+									////////////////////////
+************************
+	intro7
+************************
+
+You can feel your wits returning to you, slowly but surely. The atmosphere remains relaxed. You reassess your location, and find the van seems on its way back to where you were picked up. It would appear that the interview is almost concluded.
+
+As the van slows, and then stops, Helmholtz tells you that they will run your information the following day, but Syme will be contacting you some time in the next week. Once you are cleared, _____ will destroy any personal information they have on you so that, in the event of infiltration, you and others won't be compromised.
+
+
+
+

@@ -1,0 +1,26 @@
+/*{border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px}*/
+.jumbotron h1 small{display:block}
+
+.jumbotron { text-align: justify}
+.jumbotron a {display:block; width:250px; margin-right: auto; margin-left: auto; border-radius: 10px;}
+.jumbotron input {display:block; width:250px; margin-right: auto; margin-left: auto; border-radius: 10px;}
+
+body {
+background: black;
+}
+
+h2 {
+	font-size: 25px;
+	text-align: center;
+}
+
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	padding: 10px;
+	border-radius: 10px;
+
+}
+
