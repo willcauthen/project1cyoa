@@ -6,9 +6,9 @@ var $user;
 $(document).ready(function () {
 	console.log('JS is hooked up');
 
-////////////
-//Tutorial//
-////////////
+	////////////
+	//Tutorial//
+	////////////
 	$('#intro1').hide();
 	$('#intro2').hide();
 	$('#intro3').hide();
@@ -78,21 +78,33 @@ $(document).ready(function () {
 	//server.stuff
 	$('form#userCreate').submit(function (event) {
 		event.preventDefault();
-	debugger
 		var user = $(this).serialize();
 		console.log(user);
-		debugger
 		$.post('/users', user, function (data) {
 			debugger
-			$('.users-list').append("<li>" + data.body + "</li>");
-			debugger
+			$('.users-list').append("<li id='" + data.id + "'>" + data.body + "</li>");
 			$('#userCreate')[0].reset();
+			//location.reload();
+		});
+	});
+
+	$('#remove-user').click(function (event) {
+		event.preventDefault();
+		var userId = $(this).data(':id');
+		console.log(userId);
+		debugger
+		$.ajax ({
+			url: "/users/" + userId,
+			type: "DELETE",
+			success: function (result) {
+				$(this).parent().remove();
+			}
 		});
 	});
 });
 
 
-
+	
 
 
 var wqa = {};

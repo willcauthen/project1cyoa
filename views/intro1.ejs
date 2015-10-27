@@ -12,7 +12,7 @@
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <title>   Initiation  </title>
+  <title>   User List  </title>
     <script type="text/javascript" src="/static/js/app.js"></script>
 
 </head>
@@ -29,8 +29,12 @@
   </form>
   <br>
     <ul class="users-list">
-      <% users.forEach(function(users) { %>
-        <li> email: <%= users.email %> - username: <%=  users.username %> - userID:<%= users.id %> </li>
+      <% users.forEach(function(user) { %>
+        <li>
+          <a href="/users/<%= user.id %>" > 
+             userID: <%= user.id %> - email: <%= user.email %> - username: <%=  user.username %> -  Personal message - <%= user.body %> </a> 
+          <div id="remove-user">Remove</div>
+        </li>
         <% }) %>
     </ul>
   <br>

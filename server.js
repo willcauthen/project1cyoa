@@ -23,21 +23,18 @@ mongoose.connect(
   	'mongodb://localhost/project1cyoa');
 var User =require('./models/user.js');
 
-//USER LIST
-var users = [
-	{email: "wtf@bbq", username: "ShitbagSam", password: "secret", id: 1},
-	{email: "bbq@wtf", username: "ScumbagSteve", password: "secret", id: 2},
-	{email: "wtf@wtf", username: "FucktardFrank", password: "secret", id: 3},
-	{email: "bbq@bbq", username: "DickheadDave", password: "secret", id: 4}];
-
 //USER INDEX ?
 app.get('/users', function (request, response) {
-	response.render("intro1", {users: users});
+	User.find().exec(function (err, users) {
+		console.log(users);
+		response.render("intro1", { users: users });
+	});
 });
 
 //USERLIST SHOW
 app.get('/users/:id', function (request, response) {
-	var user = users[request.params.id];
+	User.findById(request.params.id).exec( function (err, user) {
+	});
 	response.render('user-show', {user: user});
 });
 
@@ -57,11 +54,20 @@ app.post('/users', function (request, response) {
 	User.create(user, function (err, user) {
 		if(err) { console.log(err);}
 		// response.status(200).json(user);
+		response.id = user.id;
 	});
 	response.send(user);
 });
 
 // USERLIST DELETE 
+app.delete('/users/:id', function (request, response) {
+	User.findById(request.params.id).exec( function (err, user) {
+		if(err) { console.log(err); }
+		user.remove();
+		 response.status(200);
+	});
+});
+
 // USERLIST UPDATE
 // USERLIST EDIT
 // USERLIST NEW
