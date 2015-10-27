@@ -5,11 +5,11 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-// var db = require('./models');
+var db = require('./models');
 // config codes
 app.set ('view engine', 'ejs');
 app.use("/static", express.static("public"));
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
@@ -20,7 +20,7 @@ app.get('/', function (request, response) {
 mongoose.connect(
 	process.env.MONGOLAB_URI ||
   	process.env.MONGOHQ_URL ||
-  	'mongodb://localhost/Project1_app');
+  	'mongodb://localhost/project1cyoa');
 var User =require('./models/user.js');
 
 //USER LIST
@@ -53,10 +53,10 @@ app.get('/users/:id', function (request, response) {
 app.post('/users', function (request, response) {
 	var user = request.body;
 	console.log(user);
-	var name = user.body;
-	User.create(user, function (err, name) {
+	// var user = request.body;
+	User.create(user, function (err, user) {
 		if(err) { console.log(err);}
-		response.status(200).json(name);
+		// response.status(200).json(user);
 	});
 	response.send(user);
 });
