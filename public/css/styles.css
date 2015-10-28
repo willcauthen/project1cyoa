@@ -24,3 +24,10 @@ input {
 
 }
 
+#remove-user {
+	width: 75px;
+	height: 75px;
+	background: red;
+	border-radius: 100px;
+}
+

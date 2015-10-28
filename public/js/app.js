@@ -17,6 +17,8 @@ $(document).ready(function () {
 	$('#kill1').hide();
 	$('#intro6').hide();
 	$('#intro7').hide();
+	$('#signup-form').hide();
+	$('#intro8').hide();
 	$('#toIntro').click(function () {
 		$('#intro').hide();
 		$('#intro1').show();
@@ -37,8 +39,10 @@ $(document).ready(function () {
 		event.preventDefault();
 		$email = document.getElementById("yremail").value;
 			console.log($email);
+			$('#emailSignup').val($email);
 			$('#intro3').hide();
 			$('#intro4').show();
+
 	});
 
 	$('form#form2').submit(function (event) {
@@ -55,16 +59,15 @@ $(document).ready(function () {
 		if( $password === $pass2 ) {
 			$('#intro5').hide();
 			$('#intro6').show();
+			$('#passwordSignup').val($password);
 		} else {
 			$('#intro5').hide();
 			$('#kill1').show();
 			console.log('you done fucked up');
 		}
 	});
-	$('form#form4').submit(function (event) {
+	$('#toIntro7').click(function (event) {
 		event.preventDefault();
-		var $user = document.getElementById('username').value;
-		console.log($user);
 		$('#intro6').hide();
 		$('#intro7').show();
 	});
@@ -81,7 +84,6 @@ $(document).ready(function () {
 		var user = $(this).serialize();
 		console.log(user);
 		$.post('/users', user, function (data) {
-			debugger
 			$('.users-list').append("<li id='" + data.id + "'>" + data.body + "</li>");
 			$('#userCreate')[0].reset();
 			//location.reload();
@@ -90,16 +92,26 @@ $(document).ready(function () {
 
 	$('#remove-user').click(function (event) {
 		event.preventDefault();
-		var userId = $(this).data(':id');
+		var userId = $(this).data('id');
 		console.log(userId);
-		debugger
 		$.ajax ({
 			url: "/users/" + userId,
 			type: "DELETE",
 			success: function (result) {
-				$(this).parent().remove();
+				//$(this).parent().remove();
+				console.log(result);
+				window.location ="/users";
 			}
 		});
+	});
+
+	$('#finish').click(function (event) {
+		event.preventDefault();
+		// $('#emailSignup').val($email);
+		// $('#passwordSignup').val($password);
+		$('#makeUser').submit();
+		$('#intro7').hide();
+		$('#intro8').show();
 	});
 });
 

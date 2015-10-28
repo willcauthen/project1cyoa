@@ -24,7 +24,9 @@
   <h1>      </h1>
    <form id="userCreate">
     <label for="body">New User</label><br>
-    <input type="text" name="body" />
+    <!-- <input type="text" name="body" />
+    <input type="text" name="userEmail" placeholder="email" />
+    <input type="text" name="userName" placeholder="username" /> -->
     <button type="submit">Save</button>
   </form>
   <br>
@@ -32,14 +34,11 @@
       <% users.forEach(function(user) { %>
         <li>
           <a href="/users/<%= user.id %>" > 
-             userID: <%= user.id %> - email: <%= user.email %> - username: <%=  user.username %> -  Personal message - <%= user.body %> </a> 
-          <div id="remove-user">Remove</div>
+             userID: <%= user.id %> - email: <%= user.email %> -  Personal message - <%= user.body %> </a> 
         </li>
         <% }) %>
     </ul>
   <br>
- <!--  <p><a class="btn btn-primary btn-lg" role="button" href="intro2" id="toIntro2">Continue</a></p>
-  <p><a class="btn btn-primary btn-lg" role="button" href="index" id="toIndex">On second thought...</a></p> -->
 </div>
 </div>
 </div>

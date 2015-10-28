@@ -14,6 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<title>		Dystopia	</title>
     <script type="text/javascript" src="/static/js/app.js"></script>
+    <script type="text/javascript" src="/static/js/auth.js"></script>
 
 </head>
 <body>
@@ -94,15 +95,27 @@
 
                     <p>They tell you that none within _____ use, or even know, one anothers' real names. If you are to join, you will similarly have to take a false name. They introduce themselves as Syme & Helmholtz. Syme being the same figure that approached you, and invited you to this cloak-and-dagger outing. Syme is to serve as your mentor as you learn your way around _____, and until you are fully initiated, he will serve as your sole connection to _____.</p>
                     <form id="form4">
-                        <input type="text" id="username" name="user" required>
-                        <input type="submit" class="btn btn-primary btn-lg" id="toIntro7" value="Continue">
+                        <a role="button" class="btn btn-primary btn-lg" id="toIntro7" >Continue</a>
                     </form>
                 </div>
                 <div id="intro7">
                     <p>You can feel your wits returning to you, slowly but surely. The atmosphere remains relaxed. You reassess your location, and find the van seems on its way back to where you were picked up. It would appear that the interview is almost concluded.</p>
 
                     <p>As the van slows, and then stops, Helmholtz tells you that they will run your information the following day, but Syme will be contacting you some time in the next week. Once you are cleared, _____ will destroy any personal information they have on you so that, in the event of infiltration, you and others won't be compromised.</p>
+                     <a id="finish" class="btn btn-primary btn-lg" role="button" >Finish initiation</a>
                 </div>
+
+                <div id="intro8">
+                    <p> they drop you off, and you head back to whereever it is you came from</p>
+                </div>
+                <div id="signup-form">
+                    <form id="signUp">
+                        <input type="email" name="emailz" id="emailSignup" value="">
+                        <input type="password" name="passwordz" id="passwordSignup" value="">
+                        <input type="submit" role="button" id="makeUser" >
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
