@@ -23,6 +23,20 @@ UserSchema.statics.createSecure = function(email, password, callback) {
 		});
 };
 
+UserSchema.statics.authenticate =function (email, password, callback) {
+	this.findOne({ email: email }, function (err, user) {
+		console.log(user);
+		if(!user) {
+			callback ("no user with email " + email, null);
+		} else if (user.checkPassword(password)) {
+			callback(null, user);
+		}
+	});
+};
+
+UserSchema.methods.checkPassword = function(password) {
+	return bcrypt.compareSync(password, this.passwordDigest);
+};
 
 
 var User = mongoose.model('User', UserSchema);

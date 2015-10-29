@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-app.get('/', function (request, response) {
+app.get('/intro', function (request, response) {
 	response.render('index');
 });
 mongoose.connect(
@@ -32,6 +32,11 @@ app.use(session({
 	secret: 'SuperSecretCookie',
 	cookie: { maxAge: 600000 }
 }));
+
+//homescreen
+app.get('/', function (request, response) {
+	response.render("home");
+});
 
 //USER INDEX ?
 app.get('/users', function (request, response) {
@@ -79,6 +84,7 @@ app.post('/signup', function (request, response) {
 	var user = request.body;
 	User.createSecure(user.emailz, user.passwordz, function (err, user) {
 		request.session.userId = user._id;
+		request.session.user = user;
 		response.json({user: user, msg: "USER CREATED"});
 	});
 });
@@ -87,6 +93,23 @@ app.get('/current-user', function (request, response) {
 	response.json({ user: request.session.user });
 });
 
+app.post('/login', function (request, response) {
+	 var user = request.body;
+	 User.authenticate(user.email, user.password, function (err, user) {
+	 	if(err) {
+	 		console.log(err);
+	 	}
+	 	request.session.userId = user._id;
+		request.session.user = user;
+		response.json(user);
+	 });
+});
+
+app.get('/logout', function (request, response) {
+	request.session.user = null;
+	request.session.userId = null;
+	response.json({msg: "User logged out"});
+});
 
 
 

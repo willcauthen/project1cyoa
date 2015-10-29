@@ -21,6 +21,27 @@ $(document).ready(function () {
 
 		$.post('/signup', user, function (data) {
 			console.log(data);
+			checkAuth();
+
+		});
+	});
+
+	$('#login-form').submit(function (event) {
+		event.preventDefault();
+		var user = $(this).serialize();
+
+		$.post('/login', user, function (data) {
+			checkAuth();
+		});
+	});
+
+	$('#logout').click(function (event) {
+		 event.preventDefault();
+		 debugger
+
+		 $.get('/logout', function (data) {
+		 	console.log(data.msg);
+		 	debugger
 		});
 	});
 });

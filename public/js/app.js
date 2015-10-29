@@ -9,6 +9,7 @@ $(document).ready(function () {
 	////////////
 	//Tutorial//
 	////////////
+
 	$('#intro1').hide();
 	$('#intro2').hide();
 	$('#intro3').hide();
@@ -19,7 +20,7 @@ $(document).ready(function () {
 	$('#intro7').hide();
 	$('#signup-form').hide();
 	$('#intro8').hide();
-	$('#toIntro').click(function () {
+	$('#toIntro1').click(function () {
 		$('#intro').hide();
 		$('#intro1').show();
 
