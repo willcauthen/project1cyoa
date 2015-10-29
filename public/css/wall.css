@@ -1,0 +1,140 @@
+body {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  /*background-image: url("http://orig13.deviantart.net/8421/f/2012/221/3/9/city_ruins_5_by_indigodeep-d5afhu6.jpg"); */
+  background-color: black;
+  background-repeat: no-repeat;
+
+  /* Sanity Check! */
+}
+
+h1 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+input {
+  color: grey;
+}
+p {
+  font-size: 20px;
+  word-spacing: ;
+}
+
+.intro {
+	background-color: rgba(30, 30, 30, .5);
+	color: white;
+
+}
+form#login {
+  position: absolute;
+  left: 0px;
+  top: -500px;
+}
+
+
+#userComment{
+  width: 500px;
+}
+
+.commentBox {
+    padding: 100px;
+	width: 2000px;
+	background-color: rgba(30, 30, 30, .5);
+	
+
+
+}
+li.ui-state-default{
+    background:rgba(30, 30, 30, .5);
+    border:none;
+    border-bottom:1px solid #ddd;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#rgba(30, 30, 30, .5);
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+.btn,.form-control,.well {
+    border-radius:1px;
+    box-shadow:0 0 0;
+
+}
+
+.form-control {
+    border-color: rgba(30, 30, 30, .5);
+}
+
+.btn-primary {
+    border-color: transparent;
+}
+
+.btn-primary, .list-group-item.active:focus {
+    background-color:#4285f4;
+} 
+
+.btn-plus {
+    background-color: rgba(30, 30, 30, .5);
+    border-width:1px;
+    border-color:#dddddd;
+    box-shadow:1px 1px 0 #999999;
+    border-radius:3px;color:#666666;
+    text-shadow:0 0 1px #bbbbbb;
+}
+
+.well,.panel {
+    border-color: rgba(30, 30, 30, .5);
+    box-shadow:0 1px 0 #cfcfcf;
+    border-radius:3px;
+    position: center;
+    
+}
+
+hr {
+ border-color:#ececec;
+}
+.paint1 {
+  color: crimson;
+}
+.paint2{
+  color: blue;
+}
+.paint3 {
+  color: yellow;
+}
+.paint4 {
+  color: white;
+}
+button {
+ outline: 0;
+}
+.well {
+	background-color: rgba(30, 30, 30, .6);
+	font-family: 'Permanent Marker', cursive;
+	color: white;
+	font-size: 25px;
+}
+
+.btn span{
+ color:#666666;
+}
+
+.list-group-item:first-child,.list-group-item:last-child {
+ border-radius:0;
+}
+
+h3 { 
+ border:0 solid #efefef; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+}
+

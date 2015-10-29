@@ -20,6 +20,8 @@ $(document).ready(function () {
 	$('#intro7').hide();
 	$('#signup-form').hide();
 	$('#intro8').hide();
+	$('#tag').hide();
+
 	$('#toIntro1').click(function () {
 		$('#intro').hide();
 		$('#intro1').show();
@@ -29,12 +31,10 @@ $(document).ready(function () {
 		$('#intro1').hide();
 		$('#intro2').show();
 	});
-
 	$('.toIntro3').click(function () {
 		$('#intro2').hide();
 		$('#intro3').show();
 	});
-
 	//this function  will eventually send a given email address to the database, to start building a user accoutn
 	$('form#form1').submit(function (event) {
 		event.preventDefault();
@@ -43,9 +43,7 @@ $(document).ready(function () {
 			$('#emailSignup').val($email);
 			$('#intro3').hide();
 			$('#intro4').show();
-
 	});
-
 	$('form#form2').submit(function (event) {
 		event.preventDefault();
 		$password = document.getElementById("pass1").value;
@@ -73,8 +71,6 @@ $(document).ready(function () {
 		$('#intro7').show();
 	});
 
-
-
 	$('.killedOff').click(function () {
 		location.reload();
 	});
@@ -90,7 +86,6 @@ $(document).ready(function () {
 			//location.reload();
 		});
 	});
-
 	$('#remove-user').click(function (event) {
 		event.preventDefault();
 		var userId = $(this).data('id');
@@ -105,7 +100,6 @@ $(document).ready(function () {
 			}
 		});
 	});
-
 	$('#finish').click(function (event) {
 		event.preventDefault();
 		// $('#emailSignup').val($email);
@@ -115,13 +109,3 @@ $(document).ready(function () {
 		$('#intro8').show();
 	});
 });
-
-
-	
-
-
-var wqa = {};
-var API_URL = "http://en.wikiquote.org/w/api.php";
-
-
-

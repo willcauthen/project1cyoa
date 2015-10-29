@@ -16,7 +16,9 @@
 
 </head>
 <body><!--Pulling Awesome Font -->
-<div class="container">
+
+
+<div class="not-logged-in container">
     <div class="row vertical-offset-100">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
@@ -32,7 +34,7 @@
                         <div class="form-group">
                             <input class="form-control" placeholder="Password" name="password" type="password" value="">
                         </div>
-                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                        <input class="btn btn-lg btn-success btn-block" id="loginPortal" type="submit" value="Login">
                         <a class="btn btn-lg btn-success btn-block" id="toIntro" href="/intro" type="button">Create an account</a>
                     </fieldset>
                     </form>
@@ -42,11 +44,12 @@
     </div>
 </div>
 <div class="logged-in">
-    <h1>user is logged in!</h1>
-    <a class="btn btn-lg btn-success btn-block" id="logout" href="#" type="button">Logout User</a>
+    <h1>"Those two, in paradise, were given a choice: happiness without freedom, or freedom without happiness. There was no third alternative."</h1><h2>Yevgeny Zamyatin, <u>We</u> </h2>
+    <a class="btn btn-lg btn-success btn-block" id="logout" href="/" type="button">Logout User</a>
+    <a class="btn btn-lg btn-success btn-block" href="/wall" type="button">Back to the action</a> 
 </div>
 <div class="not-logged-in">
-    <h1>User is not logged in!</h1>    
+    <h1></h1>    
 </div>
 </body>
 </html>

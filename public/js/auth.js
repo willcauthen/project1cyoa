@@ -37,11 +37,15 @@ $(document).ready(function () {
 
 	$('#logout').click(function (event) {
 		 event.preventDefault();
-		 debugger
-
 		 $.get('/logout', function (data) {
-		 	console.log(data.msg);
-		 	debugger
+		 	location.reload();
 		});
+	});
+	$('#loginPortal').click(function() {
+		if(data.user) {
+			if(data.user) {
+				window.location.href = "/wall";
+			}
+		}
 	});
 });

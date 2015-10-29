@@ -30,12 +30,16 @@ app.use(session({
 	saveUninitialized: true,
 	resave: true,
 	secret: 'SuperSecretCookie',
-	cookie: { maxAge: 600000 }
+	cookie: { maxAge: 60 * 60 * 1000 }
 }));
 
 //homescreen
 app.get('/', function (request, response) {
 	response.render("home");
+});
+
+app.get('/wall', function (request, response) {
+	response.render("wall");
 });
 
 //USER INDEX ?
@@ -110,8 +114,6 @@ app.get('/logout', function (request, response) {
 	request.session.userId = null;
 	response.json({msg: "User logged out"});
 });
-
-
 
 app.listen(process.env.PORT || 5000, function (request, response) {
 	console.log("The harvest is over, the summer is ended, and we are not saved");
