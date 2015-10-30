@@ -29,7 +29,7 @@ $(document).ready(function(){
 		alert("WHAT THE FUCK ARE YOU THINKING? THE WHOLE POINT OF THIS OVERLY COMPLICATED PROCESS IS ANONYMITY!");
 	});
 //the log of codewords and their meanings, respectively
-code = {action:[{ 'BAD': 'RESCUE'}, {'GOOD': 'ELIMINATE'}, {'FUCK': 'MEET AT'}, {'SEE': 'SABOTAGE'}, {'ASSHOLE': 'CASE'}, {'LOUD': 'BURGLARY'}, {'DANCE': 'DISTRACT'}],
+code = {action:[{ 'BAD': 'RESCUE'}, {'GOOD': 'ELIMINATE'}, {'FUCK': 'MEETING AT'}, {'SEE': 'SABOTAGE'}, {'ASSHOLE': 'CASE'}, {'LOUD': 'BURGLARY'}, {'DANCE': 'DISTRACT'}],
 		location:[{'WOLF': 'DETENTION CENTER'}, {'POLICE': 'SAFEHOUSE 1'}, {'KARATE': 'SAFEHOUSE 2'}, {'TIME': 'SAFEHOUSE 3'}, {'ANIMAL': 'SAFEHOUSE 4'}, {'DAMN': 'WEAPON CACHE'}, {'NOW': 'THIS WALL'}, {'DESPERADO': 'CITY HALL'}, {'FUNKY': 'SUBWAY'}, {'KANYE': 'STADIUM'}],
 		day:[{'SONNYBOI': 'SUNDAY'}, {'JUNNIPER': 'MONDAY'}, {'MARRRTY': 'TUESDAY'}, {'MERCUTIO': 'WEDNESDAY'}, {'GIOVANNI': 'THURSDAY'}, {'THEVENETIAN': 'FRIDAY'}, {'KINGKRON': 'SATURDAY'}, {'TINY': 'ASAP'}]
 	}; 
