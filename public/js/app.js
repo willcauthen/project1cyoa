@@ -21,6 +21,7 @@ $(document).ready(function () {
 	$('#signup-form').hide();
 	$('#intro8').hide();
 	$('#tag').hide();
+	$('#intro9').hide();
 
 	$('#toIntro1').click(function () {
 		$('#intro').hide();
