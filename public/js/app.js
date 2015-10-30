@@ -108,4 +108,8 @@ $(document).ready(function () {
 		$('#intro7').hide();
 		$('#intro8').show();
 	});
+	$('#opnEnv').click(function () {
+		$('intro8').hide();
+		$('#intro9').show();
+	});
 });

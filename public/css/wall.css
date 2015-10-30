@@ -138,3 +138,15 @@ h3 {
  padding-bottom:10px;
 }
 
+.well {
+  width: 400px;
+}
+
+.coder {
+  width: 400px;
+}
+.codeRing {
+  width: 250px;
+  height: 150px;
+}
+
