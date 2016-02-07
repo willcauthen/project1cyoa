@@ -115,6 +115,6 @@ app.get('/logout', function (request, response) {
 	response.json({msg: "User logged out"});
 });
 
-app.listen(process.env.PORT || 5000, function (request, response) {
+app.listen(process.env.PORT || 4000, function (request, response) {
 	console.log("The harvest is over, the summer is ended, and we are not saved");
 });
