@@ -70,3 +70,6 @@ h4 {
 .wrapper {
     text-align: center;
 }
+#splash {
+    background-image: url("/static/img/temple.jpg");
+}
