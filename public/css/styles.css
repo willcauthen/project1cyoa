@@ -5,9 +5,7 @@
 .jumbotron a {display:block; width:250px; margin-right: auto; margin-left: auto; border-radius: 10px;}
 .jumbotron input {display:block; width:250px; margin-right: auto; margin-left: auto; border-radius: 10px;}
 .jumbotron { opacity:.6; width: 70%;}
-body {
 
-}
 
 h2 {
 	font-size: 25px;
@@ -44,17 +42,6 @@ body {
     position: fixed;
 }
 
-.form-login {
-   /* background-color: #EDEDED;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;*/
-}
 #login-form {
     margin: 0 auto;
     width: 30%;
@@ -75,6 +62,10 @@ h4 {
 }
 #splash {
     background-image: url("/static/img/temple.jpg");
+}
+
+.btn {
+    width: 40%;
 }
 
 .quote {
