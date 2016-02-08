@@ -33,7 +33,6 @@ code = {action:[{ 'BAD': 'RESCUE'}, {'GOOD': 'ELIMINATE'}, {'FUCK': 'MEETING AT'
 		location:[{'WOLF': 'DETENTION CENTER'}, {'POLICE': 'SAFEHOUSE 1'}, {'KARATE': 'SAFEHOUSE 2'}, {'TIME': 'SAFEHOUSE 3'}, {'ANIMAL': 'SAFEHOUSE 4'}, {'DAMN': 'WEAPON CACHE'}, {'NOW': 'THIS WALL'}, {'DESPERADO': 'CITY HALL'}, {'FUNKY': 'SUBWAY'}, {'KANYE': 'STADIUM'}],
 		day:[{'SONNYBOI': 'SUNDAY'}, {'JUNNIPER': 'MONDAY'}, {'MARRRTY': 'TUESDAY'}, {'MERCUTIO': 'WEDNESDAY'}, {'GIOVANNI': 'THURSDAY'}, {'THEVENETIAN': 'FRIDAY'}, {'KINGKRON': 'SATURDAY'}, {'TINY': 'ASAP'}]
 	}; 
-	// var $res = []
 //function for decryption. as is, it must be case sensitive and words must be in quotes and in corresponding sequence. fix coming soon.
 	$('#codify').click(function () {
 		event.preventDefault();
@@ -53,9 +52,6 @@ code = {action:[{ 'BAD': 'RESCUE'}, {'GOOD': 'ELIMINATE'}, {'FUCK': 'MEETING AT'
 
 });
 
-
-
-// var res = str.split(" ");
 function decode( word1, word2, word3 ) {
 	for (var x = 0; x < code.action.length; x++) {
 		if(code.action[x][word1]){

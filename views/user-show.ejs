@@ -18,21 +18,18 @@
 </head>
 <body>
 
-<div class="container-fluid">
-<div class="row">
-<div class="jumbotron text-right">
-  <h1> User's page!</h1>
-
-  <br>
-  <% if(user){ %>
-  <div id="remove-user" data-id="<%= user.id%>"></div>
-  <%= user %>
-
-
-  <% } %>
-</div>
-</div>
-</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron text-right">
+        <h1> User's page!</h1>
+        <br>
+        <% if(user){ %>
+        <div id="remove-user" data-id="<%= user.id%>"></div>
+        <%= user %>
+        <% } %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 	

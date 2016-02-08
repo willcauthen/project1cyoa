@@ -84,7 +84,6 @@ $(document).ready(function () {
 		$.post('/users', user, function (data) {
 			$('.users-list').append("<li id='" + data.id + "'>" + data.body + "</li>");
 			$('#userCreate')[0].reset();
-			//location.reload();
 		});
 	});
 	$('#remove-user').click(function (event) {
@@ -95,7 +94,6 @@ $(document).ready(function () {
 			url: "/users/" + userId,
 			type: "DELETE",
 			success: function (result) {
-				//$(this).parent().remove();
 				console.log(result);
 				window.location ="/users";
 			}
@@ -103,8 +101,6 @@ $(document).ready(function () {
 	});
 	$('#finish').click(function (event) {
 		event.preventDefault();
-		// $('#emailSignup').val($email);
-		// $('#passwordSignup').val($password);
 		$('#makeUser').submit();
 		$('#intro7').hide();
 		$('#intro8').show();
