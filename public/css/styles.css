@@ -4,9 +4,9 @@
 .jumbotron { text-align: justify; margin: 0 auto;}
 .jumbotron a {display:block; width:250px; margin-right: auto; margin-left: auto; border-radius: 10px;}
 .jumbotron input {display:block; width:250px; margin-right: auto; margin-left: auto; border-radius: 10px;}
-
+.jumbotron { opacity:.6; width: 70%;}
 body {
-background: black;
+
 }
 
 h2 {
@@ -45,7 +45,7 @@ body {
 }
 
 .form-login {
-    background-color: #EDEDED;
+   /* background-color: #EDEDED;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -53,12 +53,15 @@ body {
     border-radius: 15px;
     border-color:#d2d2d2;
     border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;
+    box-shadow:0 1px 0 #cfcfcf;*/
+}
+#login-form {
+    margin: 0 auto;
+    width: 30%;
 }
 
 h4 { 
  border:0 solid #fff; 
- border-bottom-width:1px;
  padding-bottom:10px;
  text-align: center;
 }
@@ -72,4 +75,20 @@ h4 {
 }
 #splash {
     background-image: url("/static/img/temple.jpg");
+}
+
+.quote {
+    background: rgba(30, 0, 0, .5);
+    color: white;
+    margin: 50px auto;
+    width: 60%;
+}
+.intro {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(30, 0, 0, .5);
+    color: limegreen;
+}
+#intro_body {
+    background: url("/static/img/industry.jpg");
 }

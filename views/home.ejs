@@ -16,52 +16,41 @@
 
 </head>
 <body id="splash"><!--Pulling Awesome Font -->
-    
-
-<div class="not-logged-in container">
-    <div class="row vertical-offset-100">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Please sign in</h3>
-                </div>
-                <div class="panel-body">
-                    <form accept-charset="UTF-8" id="login-form" role="form">
-                    <fieldset>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="E-mail" name="email" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                        </div>
-                        <input class="btn btn-lg btn-success btn-block" id="loginPortal" type="submit" value="Login">
-                        <a class="btn btn-lg btn-success btn-block" id="toIntro" href="/intro" type="button">Create an account</a>
-                    </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!-- if logged in -->
+    <div class="logged-in">
+        <h1></h1>    
+        <a class="btn btn-lg btn-success btn-block" id="logout" href="/" type="button">Logout User</a>
+        <a class="btn btn-lg btn-success btn-block" href="/wall" type="button">Back to the action</a> 
     </div>
-</div>
-<div class="logged-in">
-    <h1></h1>    
-    <a class="btn btn-lg btn-success btn-block" id="logout" href="/" type="button">Logout User</a>
-    <a class="btn btn-lg btn-success btn-block" href="/wall" type="button">Back to the action</a> 
-</div>
-<div class="not-logged-in">
 
-    <br>
-    <br>
-    <h2>"Those two, in paradise, were given a choice: happiness without freedom, or freedom without happiness. There was no third alternative."</h2><h3>Yevgeny Zamyatin, <u>We</u> </h3>
 
-    <br> <br>
-    <h4><p>In the world I offer, we find ourselves in a place where governance has run amok. Forced disappearances, censorship, incessant monitoring, and capitalistic campaigns to acquire capital at all costs have left the people spiritually impoverished, emotionally destitute, and finacially burdened, or so it is perceived by our young, idealistic narrator.</p>
+    <!-- if not logged in -->
+    
+    <div class="not-logged-in">
+        <div class="quote">        
+            <h2>"Those two, in paradise, were given a choice: happiness without freedom,
+            or freedom without happiness. There was no third alternative."</h2>
+            <h4>Yevgeny Zamyatin, <u>We</u> </h4>
+        </div>
+        <div class="intro">
+            <h4>
+            <p>In the world I offer, we find ourselves in a place where governance has run amok.
+             Forced disappearances, censorship, incessant monitoring, and capitalistic campaigns to acquire capital at all costs have left the people spiritually impoverished, emotionally destitute, and finacially burdened, or so it is perceived by our young, idealistic narrator.</p>
 
-    <p>Our young hero seeks to join the ranks of an agency calling themselves Project Mayhem, which aims to disrupt what they percieve as a consumerist-culture run off the rails. They employ methods of arson, assault, misinformation, and general mischief, but remain strictly non-lethal as a rule.</p>
+            <p>Our young hero seeks to join the ranks of an agency calling themselves Project Mayhem, which aims to disrupt what they percieve as a consumerist-culture run off the rails. They employ methods of arson, assault, misinformation, and general mischief, but remain strictly non-lethal as a rule.</p>
 
-    <p>To whence the hero ends up will be for you to decide. In this low-tech, text-based choose-your-own-adventure, you will take control of our unnamed protaganist as he/she traverses a complicated web of propoganda, destruction, and ethics.</p>
+            <p>To whence the hero ends up will be for you to decide. In this low-tech, text-based choose-your-own-adventure, you will take control of our unnamed protaganist as he/she traverses a complicated web of propoganda, destruction, and ethics.</p>
 
-    <p>Choices line the road ahead. What kind of world will you build, through your actions?</p></h4>
-</div>
+            <p>Choices line the road ahead. What kind of world will you build, through your actions?</p></h4>
+        </div>
+        <form accept-charset="UTF-8" id="login-form" role="form">
+            <fieldset>
+                <input class="form-control" placeholder="E-mail" name="email" type="text">
+                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                <input class="btn btn-lg btn-success btn-block" id="loginPortal" type="submit" value="Login">
+                <a class="btn btn-lg btn-success btn-block" id="toIntro" href="/intro" type="button">Create an account</a>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
