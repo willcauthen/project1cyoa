@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var db = require('./models');
 var session = require('express-session');
 
-
+ 
 // config codes
 app.set ('view engine', 'ejs');
 app.use("/static", express.static("public"));
